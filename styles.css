@@ -1,0 +1,562 @@
+/* ==========================================================================
+   SHREYA MAKEOVERS — HAUTE BRIDAL ARTISTRY & LUXURY ACADEMY
+   Cinematic Editorial Design System & Motion Framework
+   ========================================================================== */
+
+/* -------------------------------------------------------------------------
+   1. DESIGN TOKENS & ROOTS
+   ------------------------------------------------------------------------- */
+:root {
+  /* Surfaces & Canvas */
+  --c-alabaster:     #FAF8F5;
+  --c-linen:         #F4EFEB;
+  --c-bone:          #ECE6DF;
+  --c-white:         #FFFFFF;
+  
+  /* Ink & Typography */
+  --c-onyx:          #111111;
+  --c-charcoal:      #1A1918;
+  --c-ink:           #0D0D0C;
+  --c-ink-soft:      #282725;
+  --c-mist:          #6A6560;
+  --c-ghost:         #9A9590;
+
+  /* Champagne & Antique Gold Accents */
+  --c-gold-300:      #E2CEB5;
+  --c-gold-400:      #C9A982;
+  --c-gold-500:      #B8976C;
+  --c-gold-600:      #9E7E55;
+  --c-gold-accent:   #9E7938;
+
+  /* Hairlines & Borders */
+  --c-border:        #E8DFD5;
+  --c-border-subtle: rgba(184, 151, 108, 0.22);
+  --c-border-dark:   rgba(255, 255, 255, 0.12);
+
+  /* Fonts */
+  --f-serif:         'Cormorant Garamond', Georgia, serif;
+  --f-display:       'Playfair Display', Georgia, serif;
+  --f-sans:          'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --f-script:        'Alex Brush', cursive;
+
+  /* Easing curves */
+  --ease-luxury:     cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-smooth:     cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-in-out:     cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+/* -------------------------------------------------------------------------
+   2. LENIS SMOOTH SCROLL INTEGRATION
+   ------------------------------------------------------------------------- */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* -------------------------------------------------------------------------
+   3. BASE & RESET
+   ------------------------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--c-alabaster);
+  color: var(--c-onyx);
+  font-family: var(--f-sans);
+  overflow-x: hidden;
+  selection-background-color: var(--c-gold-400);
+  selection-color: #FFFFFF;
+}
+
+::selection {
+  background: var(--c-gold-400);
+  color: #FFFFFF;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--c-linen);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--c-gold-400);
+  border-radius: 99px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--c-gold-500);
+}
+
+/* -------------------------------------------------------------------------
+   4. TYPOGRAPHY
+   ------------------------------------------------------------------------- */
+.font-serif-luxury {
+  font-family: var(--f-serif);
+}
+
+.font-script {
+  font-family: var(--f-script);
+}
+
+.tracking-ultra {
+  letter-spacing: 0.28em;
+}
+
+.tracking-widest-luxury {
+  letter-spacing: 0.22em;
+}
+
+/* Hero line-by-line masked reveal container */
+.hero-headline-line {
+  overflow: hidden;
+  display: block;
+  padding-bottom: 0.08em;
+}
+
+.hero-line-inner {
+  display: block;
+  will-change: transform, opacity;
+}
+
+/* Eyebrow kicker with gold hairline */
+.t-eyebrow-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--c-gold-accent);
+}
+
+.t-eyebrow-kicker::before {
+  content: "";
+  display: inline-block;
+  width: 2rem;
+  height: 1.5px;
+  background-color: var(--c-gold-accent);
+}
+
+/* -------------------------------------------------------------------------
+   5. REFINED STICKY NAVIGATION
+   Transitions smoothly to slightly reduced height, shadow, and glass blur
+   ------------------------------------------------------------------------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: rgba(250, 248, 245, 0.92);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  transition: height 0.4s var(--ease-luxury), background-color 0.4s var(--ease-luxury), box-shadow 0.4s var(--ease-luxury), border-color 0.4s var(--ease-luxury);
+}
+
+.site-header-inner {
+  transition: height 0.4s var(--ease-luxury);
+}
+
+.site-header.scrolled {
+  background-color: rgba(250, 248, 245, 0.98);
+  box-shadow: 0 4px 20px -2px rgba(17, 17, 17, 0.06);
+  border-bottom-color: rgba(0, 0, 0, 0.09);
+}
+
+.site-header.scrolled .site-header-inner {
+  height: 4.25rem !important;
+}
+
+@media (min-width: 768px) {
+  .site-header.scrolled .site-header-inner {
+    height: 4.75rem !important;
+  }
+}
+
+/* -------------------------------------------------------------------------
+   6. EDITORIAL BORDERS & SURFACES
+   ------------------------------------------------------------------------- */
+.editorial-border {
+  border-color: var(--c-border-subtle);
+}
+
+.editorial-border-dark {
+  border-color: var(--c-border-dark);
+}
+
+/* -------------------------------------------------------------------------
+   7. CINEMATIC IMAGE & CARD INTERACTIONS
+   ------------------------------------------------------------------------- */
+
+/* Zoom image container with silk ease */
+.zoom-img-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.zoom-img-container img {
+  transition: transform 0.85s var(--ease-smooth);
+  will-change: transform;
+}
+
+.zoom-img-container:hover img {
+  transform: scale(1.045);
+}
+
+/* Subtle luxury sheen passing across cards on hover */
+.luxury-sheen {
+  position: relative;
+  overflow: hidden;
+}
+
+.luxury-sheen::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    115deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.1) 48%,
+    rgba(255, 255, 255, 0.22) 50%,
+    rgba(255, 255, 255, 0.1) 52%,
+    transparent 70%
+  );
+  transform: translateX(-100%);
+  transition: transform 0.95s var(--ease-luxury);
+  pointer-events: none;
+  z-index: 10;
+}
+
+.luxury-sheen:hover::after {
+  transform: translateX(100%);
+}
+
+/* -------------------------------------------------------------------------
+   8. FOUNDER PORTRAIT — PROFESSIONAL 3D TILT & AMBIENT BREATHING
+   Preserves exact photo asset with compact dimensions & subtle depth
+   ------------------------------------------------------------------------- */
+.portrait-tilt-container {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.portrait-tilt-card {
+  transition: transform 0.35s var(--ease-smooth), box-shadow 0.35s ease;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.portrait-badge-parallax {
+  transform: translateZ(24px);
+  transition: transform 0.35s var(--ease-smooth);
+}
+
+/* Breathing ambient glow */
+@keyframes ambient-breathe {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(0.98);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.04);
+  }
+}
+
+.ambient-glow {
+  animation: ambient-breathe 6.5s ease-in-out infinite;
+}
+
+/* -------------------------------------------------------------------------
+   9. EDITORIAL LINKS & BUTTON MICRO-INTERACTIONS
+   ------------------------------------------------------------------------- */
+.editorial-link {
+  position: relative;
+  transition: color 0.25s ease;
+}
+
+.editorial-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--c-gold-500);
+  transition: width 0.35s var(--ease-luxury);
+}
+
+.editorial-link:hover::after,
+.editorial-link.active::after {
+  width: 100%;
+}
+
+.btn-arrow {
+  transition: transform 0.3s var(--ease-luxury);
+  display: inline-block;
+}
+
+.group:hover .btn-arrow,
+a:hover .btn-arrow,
+button:hover .btn-arrow {
+  transform: translateX(4px);
+}
+
+/* Primary CTA luxury pill hover */
+.btn-primary-luxury {
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.35s ease, box-shadow 0.35s ease, transform 0.25s ease;
+}
+
+.btn-primary-luxury:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px -4px rgba(184, 151, 108, 0.28);
+}
+
+/* -------------------------------------------------------------------------
+   10. INTERACTIVE SERVICE CARDS
+   ------------------------------------------------------------------------- */
+.service-card {
+  transition: transform 0.4s var(--ease-smooth), box-shadow 0.4s var(--ease-smooth), border-color 0.3s ease;
+  will-change: transform;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px -10px rgba(163, 128, 84, 0.12), 0 6px 18px -4px rgba(17, 17, 17, 0.04);
+  border-color: rgba(184, 151, 108, 0.4);
+}
+
+/* -------------------------------------------------------------------------
+   11. LOOKBOOK FILTERING & CARDS
+   ------------------------------------------------------------------------- */
+.filter-pill {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 0.5rem 1.25rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: transparent;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  transition: all 0.25s var(--ease-luxury);
+}
+
+.filter-pill:hover {
+  border-color: var(--c-gold-300);
+  color: #FFFFFF;
+}
+
+.filter-pill.active {
+  background: var(--c-gold-500);
+  color: var(--c-onyx);
+  border-color: var(--c-gold-500);
+  font-weight: 600;
+}
+
+.lookbook-item {
+  transition: opacity 0.35s ease, transform 0.35s var(--ease-luxury);
+  will-change: transform, opacity;
+}
+
+/* -------------------------------------------------------------------------
+   12. MODALS (BOOKING & LIGHTBOX)
+   ------------------------------------------------------------------------- */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(13, 13, 12, 0.84);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.35s ease, visibility 0.35s ease;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.modal-box {
+  background: var(--c-alabaster);
+  border: 1px solid var(--c-border);
+  border-radius: 1.25rem;
+  width: 100%;
+  max-width: 640px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 32px 72px -16px rgba(0, 0, 0, 0.5);
+  transform: scale(0.96) translateY(14px);
+  opacity: 0;
+  transition: transform 0.4s var(--ease-luxury), opacity 0.4s var(--ease-luxury);
+}
+
+.modal-overlay.active .modal-box {
+  transform: scale(1) translateY(0);
+  opacity: 1;
+}
+
+/* Field Inputs inside modal */
+.field-label {
+  display: block;
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #55524E;
+  margin-bottom: 0.4rem;
+}
+
+.field-input {
+  width: 100%;
+  background: #FFFFFF;
+  border: 1px solid var(--c-border);
+  border-radius: 0.625rem;
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  color: var(--c-onyx);
+  font-family: var(--f-sans);
+  outline: none;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.field-input:focus {
+  border-color: var(--c-gold-500);
+  box-shadow: 0 0 0 3px rgba(184, 151, 108, 0.16);
+}
+
+/* -------------------------------------------------------------------------
+   13. LIGHTBOX MODAL
+   ------------------------------------------------------------------------- */
+.lightbox-content {
+  background: #161514;
+  border: 1px solid rgba(196, 164, 124, 0.3);
+  border-radius: 1.25rem;
+  max-width: 54rem;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 0 40px 80px -20px rgba(0, 0, 0, 0.7);
+  position: relative;
+  transform: scale(0.96) translateY(14px);
+  opacity: 0;
+  transition: transform 0.4s var(--ease-luxury), opacity 0.4s var(--ease-luxury);
+}
+
+.modal-overlay.active .lightbox-content {
+  transform: scale(1) translateY(0);
+  opacity: 1;
+}
+
+/* -------------------------------------------------------------------------
+   14. MOBILE STICKY RESERVATION BAR
+   ------------------------------------------------------------------------- */
+.mobile-sticky-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 45;
+  background: rgba(17, 17, 17, 0.96);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-top: 1px solid rgba(184, 151, 108, 0.25);
+  padding: 0.875rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transform: translateY(100%);
+  transition: transform 0.4s var(--ease-luxury);
+}
+
+.mobile-sticky-bar.visible {
+  transform: translateY(0);
+}
+
+@media (min-width: 1024px) {
+  .mobile-sticky-bar {
+    display: none !important;
+  }
+}
+
+/* -------------------------------------------------------------------------
+   15. BOTANICAL SVG WATERMARK
+   ------------------------------------------------------------------------- */
+.botanical-watermark {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 33%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0.035;
+  user-select: none;
+}
+
+/* -------------------------------------------------------------------------
+   16. REDUCED MOTION PREFERENCES
+   ------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .hero-line-inner,
+  .hero-headline-line,
+  .portrait-tilt-container,
+  .portrait-tilt-card,
+  .service-card,
+  .lookbook-item {
+    transform: none !important;
+    opacity: 1 !important;
+  }
+  .ambient-glow {
+    animation: none !important;
+    opacity: 0.4 !important;
+  }
+}

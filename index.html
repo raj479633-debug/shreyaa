@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>SHREYA MAKEOVERS | Haute Bridal Artistry &amp; Luxury Academy</title>
+  <meta name="description" content="Haute bridal artistry and premier beauty masterclass academy led by master artist Shreya Chaudhary. Skin-first heirloom bridal looks. Darbhanga · Bihar · Destination Weddings Worldwide.">
+
+  <!-- Google Fonts: Cormorant Garamond, Playfair Display, Plus Jakarta Sans, Alex Brush -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS v3 with Plugins -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            alabaster: '#FAF8F5',
+            linen: '#F4EFEB',
+            bone: '#ECE6DF',
+            onyx: '#111111',
+            charcoal: '#1A1918',
+            gold: {
+              300: '#E2CEB5',
+              400: '#C9A982',
+              500: '#B8976C',
+              600: '#9E7E55',
+              accent: '#9E7938'
+            }
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'serif'],
+            display: ['"Playfair Display"', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            signature: ['"Alex Brush"', 'cursive']
+          },
+          letterSpacing: {
+            widest: '0.22em',
+            ultra: '0.28em'
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Styles for Editorial Aesthetics & Cinematic Motion -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- GSAP 3.12.5 & ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- Lenis Smooth Scrolling -->
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+</head>
+
+<body class="bg-alabaster text-onyx font-sans antialiased selection:bg-gold-400 selection:text-white" style="-webkit-font-smoothing: antialiased; text-rendering: optimizelegibility;">
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     ANNOUNCEMENT BAR
+══════════════════════════════════════════════════════════════════════════ -->
+<aside class="bg-onyx text-gold-300 text-[10px] md:text-xs tracking-ultra uppercase py-2.5 px-4 text-center border-b border-white/10 font-medium" data-purpose="announcement-bar">
+  <div class="max-w-7xl mx-auto flex items-center justify-center gap-2.5">
+    <span class="inline-block w-1.5 h-1.5 rounded-full bg-gold-400 animate-pulse"></span>
+    <span>Limited 2025–2026 Bridal Dates Open &bull; Atelier Darbhanga &amp; Destination Bookings Worldwide</span>
+  </div>
+</aside>
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     NAVIGATION
+══════════════════════════════════════════════════════════════════════════ -->
+<header class="site-header">
+  <div class="site-header-inner max-w-7xl mx-auto px-6 lg:px-12 h-20 md:h-24 flex items-center justify-between">
+    <!-- Brand Logo / Monogram -->
+    <a class="flex items-center gap-3.5 group" href="#hero">
+      <div class="w-10 h-10 md:w-11 md:h-11 rounded-full border border-onyx/80 flex items-center justify-center transition-colors duration-300 group-hover:border-gold-500">
+        <span class="font-serif text-sm md:text-base font-semibold tracking-wider text-onyx group-hover:text-gold-600 transition-colors">SM</span>
+      </div>
+      <div class="flex flex-col">
+        <span class="font-serif text-lg md:text-xl font-bold tracking-[0.25em] text-onyx leading-none">SHREYA</span>
+        <span class="text-[9px] tracking-ultra text-neutral-500 uppercase mt-1">MAKEOVERS</span>
+      </div>
+    </a>
+
+    <!-- Desktop Navigation Links -->
+    <nav class="hidden lg:flex items-center space-x-7 text-[11px] font-medium tracking-ultra uppercase text-neutral-700">
+      <a class="editorial-link active hover:text-gold-600 transition-colors py-1" href="#hero">Home</a>
+      <a class="editorial-link hover:text-gold-600 transition-colors py-1" href="#services">Bridal</a>
+      <a class="editorial-link hover:text-gold-600 transition-colors py-1" href="#academy">Academy &amp; Schedule</a>
+      <a class="editorial-link hover:text-gold-600 transition-colors py-1" href="#ritual">The Experience</a>
+      <a class="editorial-link hover:text-gold-600 transition-colors py-1" href="#lookbook">Lookbook</a>
+      <a class="editorial-link hover:text-gold-600 transition-colors py-1" href="#reviews">Praise</a>
+      <a class="editorial-link hover:text-gold-600 transition-colors py-1" href="#journal">Journal</a>
+    </nav>
+
+    <!-- Right Action CTA -->
+    <div class="flex items-center gap-4">
+      <button type="button" class="trigger-booking-modal btn-primary-luxury hidden sm:inline-flex items-center gap-2.5 px-6 py-2.5 bg-onyx text-white text-[11px] font-medium tracking-widest uppercase rounded-full hover:bg-gold-600 transition-all duration-300 shadow-sm hover:shadow-md group" data-service="Haute Bridal Consultation">
+        <span>Book Now</span>
+        <span class="btn-arrow text-gold-300 group-hover:translate-x-1 transition-transform">&rarr;</span>
+      </button>
+
+      <!-- Mobile Menu Trigger -->
+      <button id="mobile-menu-btn" aria-label="Toggle navigation menu" class="lg:hidden p-2 text-onyx hover:text-gold-500 transition-colors" type="button">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Drawer -->
+  <div class="hidden lg:hidden border-t border-black/5 bg-alabaster/98 backdrop-blur-xl px-6 py-6 space-y-4 text-xs uppercase tracking-widest text-neutral-800 transition-all" id="mobile-drawer">
+    <a class="mobile-nav-link block py-2 hover:text-gold-500" href="#hero">Home</a>
+    <a class="mobile-nav-link block py-2 hover:text-gold-500" href="#story">Brand Philosophy</a>
+    <a class="mobile-nav-link block py-2 hover:text-gold-500" href="#services">Bridal Services</a>
+    <a class="mobile-nav-link block py-2 hover:text-gold-500" href="#ritual">The 3-Step Ritual</a>
+    <a class="mobile-nav-link block py-2 hover:text-gold-500" href="#lookbook">Editorial Lookbook</a>
+    <a class="mobile-nav-link block py-2 hover:text-gold-500" href="#academy">Academy &amp; Masterclasses</a>
+    <a class="mobile-nav-link block py-2 hover:text-gold-500" href="#reviews">Client Praise</a>
+    <a class="mobile-nav-link block py-2 hover:text-gold-500" href="#journal">Atelier Journal</a>
+    <button type="button" class="trigger-booking-modal block pt-3 text-gold-600 font-semibold text-left" data-service="Mobile Navigation Consultation">
+      Book Consultation &rarr;
+    </button>
+  </div>
+</header>
+
+<main>
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     HERO SECTION
+══════════════════════════════════════════════════════════════════════════ -->
+<section class="relative overflow-hidden border-b border-black/5 bg-[#F9F6F0]" id="hero">
+  <!-- Subtle botanical floral watermark -->
+  <div class="botanical-watermark flex items-center justify-center">
+    <svg class="w-full h-full stroke-current text-onyx fill-none" stroke-width="1" viewBox="0 0 500 800">
+      <path d="M250,50 C260,180 390,240 320,380 C270,490 350,620 220,750 M250,150 C180,180 140,290 220,340 C300,390 190,520 220,650"></path>
+    </svg>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-6 lg:px-12 py-12 lg:py-16">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center py-6 lg:py-8">
+
+      <!-- LEFT: Compact, Professional Founder Portrait (Strictly Preserved Asset) -->
+      <div class="lg:col-span-5 relative order-2 lg:order-1 flex justify-center">
+        <div class="portrait-tilt-container relative w-full max-w-[340px] md:max-w-[360px]">
+          <!-- Breathing warm ambient glow -->
+          <div class="ambient-glow absolute -inset-3 bg-gradient-to-tr from-gold-300/30 to-linen/50 rounded-2xl blur-lg -z-10"></div>
+          
+          <!-- Compact Portrait Frame with Subtle Hairline Border -->
+          <div class="portrait-tilt-card w-full h-[420px] md:h-[460px] rounded-2xl overflow-hidden shadow-xl border border-[#e8dfd5] bg-linen/30 relative">
+            <img
+              alt="Shreya Chaudhary - Founder &amp; Lead Bridal Artist at Shreya Makeovers"
+              class="w-full h-full object-cover"
+              style="object-position: center 15%;"
+              loading="eager"
+              src="assets/shreya/shreya-original-portrait.jpg"
+            >
+          </div>
+
+          <!-- Floating Atelier Badge with Depth Parallax -->
+          <div class="portrait-badge-parallax absolute -bottom-3 left-1/2 -translate-x-1/2 px-4 py-2 rounded-full bg-white/95 backdrop-blur-md border border-[#e8dfd5] shadow-sm flex items-center gap-2.5 whitespace-nowrap">
+            <span class="font-script text-xl text-gold-600 leading-none">Shreya</span>
+            <span class="w-1 h-1 rounded-full bg-gold-400"></span>
+            <span class="text-[9px] uppercase tracking-widest text-neutral-600 font-medium">Founder &amp; Lead Artist</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Editorial Content & Typography with Line-by-Line Reveal -->
+      <div class="hero-text-col lg:col-span-7 order-1 lg:order-2 space-y-6 lg:pl-6">
+        <!-- Eyebrow -->
+        <div class="hero-eyebrow flex items-center gap-3">
+          <span class="w-8 h-[1.5px] bg-[#9e7938]"></span>
+          <span class="text-[11px] font-semibold uppercase tracking-widest text-[#9e7938]" style="letter-spacing: 0.22em;">HAUTE &amp; CELEBRITY BRIDAL ARTISTRY &amp; EDUCATION</span>
+        </div>
+
+        <!-- Headline with Line Masking -->
+        <h1 class="hero-headline font-serif text-4xl sm:text-5xl lg:text-6xl text-[#0d0d0c] leading-tight font-medium" style="letter-spacing: -0.025em; text-rendering: optimizelegibility;">
+          <span class="hero-headline-line block"><span class="hero-line-inner block">Bridal artistry &amp; education,</span></span>
+          <span class="hero-headline-line block"><span class="hero-line-inner block italic font-normal text-[#9e7938]">crafted as ritual</span></span>
+        </h1>
+
+        <!-- Supporting Body Paragraph -->
+        <p class="hero-subtext text-sm md:text-base text-[#282725] leading-relaxed font-normal max-w-xl" style="text-rendering: optimizelegibility;">
+          We curate slow, skin-first heirloom bridal looks designed to breathe effortlessly through sacred fire, camera flashes, and 18-hour continuous celebrations.
+        </p>
+
+        <!-- Actions -->
+        <div class="hero-actions flex flex-wrap items-center gap-5 pt-1">
+          <button type="button" class="trigger-booking-modal btn-primary-luxury px-8 py-3.5 bg-onyx text-white text-xs uppercase tracking-widest font-semibold rounded-full hover:bg-gold-600 transition-all duration-300 flex items-center gap-3 shadow-md hover:shadow-lg group" data-service="Haute Bridal Signature">
+            <span>Book The Studio</span>
+            <span class="btn-arrow text-gold-300 group-hover:translate-x-1 transition-transform">&rarr;</span>
+          </button>
+          <a class="text-xs uppercase tracking-widest text-onyx hover:text-gold-600 transition-colors font-semibold flex items-center gap-2 group" href="#story">
+            <span>Hear Our Story</span>
+            <span class="group-hover:translate-x-1 transition-transform duration-300">&rarr;</span>
+          </a>
+        </div>
+
+        <!-- Heritage Stats with Smooth Counters -->
+        <div class="hero-stats-wrapper pt-8 border-t editorial-border grid grid-cols-3 gap-4 text-center sm:text-left">
+          <div class="stat-col space-y-1">
+            <div class="flex items-center gap-2 justify-center sm:justify-start text-gold-500">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
+            </div>
+            <p class="counter-animate font-serif text-2xl lg:text-3xl text-[#0d0d0c] font-semibold" data-target="10" data-suffix="+ Yrs" style="letter-spacing: -0.02em;">10+ Yrs</p>
+            <p class="text-[10px] uppercase font-medium tracking-wider text-neutral-600">Bridal Heritage</p>
+          </div>
+
+          <div class="stat-col space-y-1 border-l editorial-border pl-4">
+            <div class="flex items-center gap-2 justify-center sm:justify-start text-gold-500">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
+            </div>
+            <p class="counter-animate font-serif text-2xl lg:text-3xl text-[#0d0d0c] font-semibold" data-target="1200" data-suffix="+" style="letter-spacing: -0.02em;">1,200+</p>
+            <p class="text-[10px] uppercase font-medium tracking-wider text-neutral-600">Brides Styled</p>
+          </div>
+
+          <div class="stat-col space-y-1 border-l editorial-border pl-4">
+            <div class="flex items-center gap-2 justify-center sm:justify-start text-gold-500">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
+            </div>
+            <p class="counter-animate font-serif text-2xl lg:text-3xl text-[#0d0d0c] font-semibold" data-target="500" data-suffix="+" style="letter-spacing: -0.02em;">500+</p>
+            <p class="text-[10px] uppercase font-medium tracking-wider text-neutral-600">Students Trained</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Ticker Ribbon -->
+  <div class="bg-onyx py-3 text-gold-300 text-[10px] uppercase tracking-[0.25em] text-center border-t border-gold-400/20">
+    <span>Beauty &bull; Skills &bull; Confidence &bull; Lifetime Legacy</span>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     BRAND STORY SECTION
+══════════════════════════════════════════════════════════════════════════ -->
+<section class="py-20 lg:py-28 bg-alabaster border-b border-black/5" id="story">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12">
+    <!-- Header -->
+    <div class="section-header-reveal max-w-2xl mx-auto text-center space-y-3 mb-16">
+      <p class="text-[11px] font-semibold tracking-widest uppercase text-[#9e7938]" style="letter-spacing: 0.22em;">The Philosophy</p>
+      <h2 class="font-serif text-3xl sm:text-5xl text-[#0d0d0c] font-normal" style="letter-spacing: -0.025em; text-rendering: optimizelegibility;">
+        Beauty, refined into an experience.
+      </h2>
+      <p class="text-xs uppercase tracking-widest text-neutral-600 font-medium" style="letter-spacing: 0.18em;">
+        Slow, deliberate artistry respecting raw skin texture
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+      <!-- Editorial Macro Close-up with Floating Caption -->
+      <div class="lg:col-span-5 editorial-image-reveal">
+        <div class="relative group">
+          <div class="zoom-img-container rounded-2xl shadow-xl border border-black/5 bg-linen luxury-sheen">
+            <img
+              alt="Masterclass macro bridal makeup artistry dewy skin details"
+              class="w-full h-[480px] object-cover"
+              loading="lazy"
+              src="assets/shreya/story-macro-precision.jpg"
+            >
+          </div>
+          <!-- Floating Editorial Caption -->
+          <div class="floating-caption absolute -bottom-6 -right-4 max-w-xs bg-white p-5 rounded-xl shadow-lg border border-black/5 hidden sm:block">
+            <p class="text-[10px] uppercase tracking-widest text-gold-600 font-semibold mb-1">Macro Precision</p>
+            <p class="text-xs text-neutral-600 leading-snug">
+              "Real skin has texture, warmth, and soul. Our sacred responsibility is to illuminate it, never mask it."
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Narrative & Pillars -->
+      <div class="lg:col-span-7 space-y-6 lg:pl-6">
+        <div class="inline-flex items-center gap-2 px-3 py-1 bg-linen rounded-full text-[10px] uppercase tracking-widest text-neutral-800 font-medium">
+          <span>Haute Bridal Atelier</span>
+          <span class="text-[#9e7938]">&bull;</span>
+          <span>Darbhanga, Bihar</span>
+        </div>
+
+        <h3 class="font-serif text-2xl sm:text-3xl text-[#0d0d0c] leading-snug font-medium" style="letter-spacing: -0.02em; text-rendering: optimizelegibility;">
+          Every bride carries centuries of heritage in her attire. Her makeup must honor that weight with lightness.
+        </h3>
+
+        <div class="space-y-4 text-[#2b2a28] text-sm md:text-base leading-relaxed font-normal" style="text-rendering: optimizelegibility;">
+          <p>
+            Founded by master artist Shreya Chaudhary, <strong class="text-[#0d0d0c] font-semibold">Shreya Makeovers</strong> was conceived to liberate bridal beauty from heavy, uniform layers. We believe in an editorial, skin-first approach where micro-hydration and shade-matching take precedence over cover-up pigments.
+          </p>
+          <p>
+            Each look is customized through lighting colorimetry—accounting for the exact gold karat of your polki, the ambient warmth of temple diyas or pheras, and the high-resolution sensors of modern cinematography. The result is a luminous, weightless presence that remains impeccable from dawn until late-night farewells.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+          <div class="p-4 rounded-xl bg-linen/50 border border-black/5 hover:border-gold-400/40 transition-colors">
+            <h4 class="font-serif text-lg text-[#0d0d0c] font-semibold" style="letter-spacing: -0.015em;">Cellular Hydration Prep</h4>
+            <p class="text-xs text-neutral-600 mt-1 leading-relaxed font-normal">Lymphatic stimulation and medical-grade skin quenching 48 hours prior to the muhurat.</p>
+          </div>
+          <div class="p-4 rounded-xl bg-linen/50 border border-black/5 hover:border-gold-400/40 transition-colors">
+            <h4 class="font-serif text-lg text-[#0d0d0c] font-semibold" style="letter-spacing: -0.015em;">18-Hour Phera Resilience</h4>
+            <p class="text-xs text-neutral-600 mt-1 leading-relaxed font-normal">Sweat-resistant, camera-ready formulas formulated specifically for tropical climates and sacred rituals.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     SIGNATURE BRIDAL SERVICES SECTION
+══════════════════════════════════════════════════════════════════════════ -->
+<section class="py-20 lg:py-28 bg-[#F5F2EC] border-b border-black/5" id="services">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12">
+    <!-- Header -->
+    <div class="section-header-reveal flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+      <div class="space-y-3">
+        <span class="text-[11px] font-semibold tracking-widest uppercase text-[#9e7938]" style="letter-spacing: 0.22em;">Curated Offerings</span>
+        <h2 class="font-serif text-3xl sm:text-5xl text-[#0d0d0c] font-normal" style="letter-spacing: -0.025em; text-rendering: optimizelegibility;">
+          Signature Bridal Services
+        </h2>
+      </div>
+      <p class="text-xs uppercase tracking-widest text-neutral-500 max-w-sm">
+        Handcrafted with bespoke formulations, couture draping, and dedicated master artist attention.
+      </p>
+    </div>
+
+    <!-- 6 Curated Service Cards in 3x2 Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Service 1: Sacred Bridal -->
+      <article class="service-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl border border-black/5 group flex flex-col justify-between luxury-sheen" data-purpose="service-card">
+        <div class="relative h-64 zoom-img-container">
+          <img
+            alt="Traditional Sacred Bridal Makeup by Shreya Makeovers"
+            class="w-full h-full object-cover"
+            loading="lazy"
+            src="assets/shreya/service-sacred-bridal.jpg"
+          >
+          <div class="absolute top-4 right-4 bg-onyx/80 backdrop-blur-md px-3 py-1 rounded-full text-[9px] uppercase tracking-widest text-gold-300">
+            Pheras &bull; Sacred Ritual
+          </div>
+        </div>
+        <div class="p-7 space-y-3 flex-1 flex flex-col justify-between">
+          <div>
+            <p class="text-[10px] uppercase tracking-widest text-gold-600 font-semibold">Heirloom Tradition</p>
+            <h3 class="font-serif text-2xl text-onyx font-medium group-hover:text-gold-600 transition-colors">Sacred Bridal Artistry</h3>
+            <p class="text-xs text-neutral-600 leading-relaxed font-light mt-2">
+              Complete heirloom transformation featuring HD micro-airbrushing, waterproof tear-resistant eye definition, and royal vermillion styling.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-black/5 flex items-center justify-between text-xs text-neutral-500">
+            <span>Duration: 3.5 Hours</span>
+            <button type="button" class="trigger-booking-modal text-onyx font-semibold hover:text-gold-600 flex items-center gap-1 group/btn" data-service="Sacred Bridal Artistry">
+              <span>Reserve</span>
+              <span class="text-gold-500 group-hover/btn:translate-x-1 transition-transform">&rarr;</span>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Service 2: Engagement Soft Glam -->
+      <article class="service-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl border border-black/5 group flex flex-col justify-between luxury-sheen" data-purpose="service-card">
+        <div class="relative h-64 zoom-img-container">
+          <img
+            alt="Editorial Indian Bride Pastel Engagement &amp; Soft Glam"
+            class="w-full h-full object-cover"
+            loading="lazy"
+            src="assets/shreya/service-engagement-softglam.jpg"
+          >
+          <div class="absolute top-4 right-4 bg-onyx/80 backdrop-blur-md px-3 py-1 rounded-full text-[9px] uppercase tracking-widest text-gold-300">
+            Ring Ceremony &bull; Sangeet
+          </div>
+        </div>
+        <div class="p-7 space-y-3 flex-1 flex flex-col justify-between">
+          <div>
+            <p class="text-[10px] uppercase tracking-widest text-gold-600 font-semibold">Ethereal Glow</p>
+            <h3 class="font-serif text-2xl text-onyx font-medium group-hover:text-gold-600 transition-colors">Engagement &amp; Soft Glam</h3>
+            <p class="text-xs text-neutral-600 leading-relaxed font-light mt-2">
+              Radiant, glass-skin base paired with romantic champagne shimmer, fluttery individual lash mapping, and natural peach petal tint.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-black/5 flex items-center justify-between text-xs text-neutral-500">
+            <span>Duration: 2.5 Hours</span>
+            <button type="button" class="trigger-booking-modal text-onyx font-semibold hover:text-gold-600 flex items-center gap-1 group/btn" data-service="Engagement &amp; Soft Glam">
+              <span>Reserve</span>
+              <span class="text-gold-500 group-hover/btn:translate-x-1 transition-transform">&rarr;</span>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Service 3: Reception Glam -->
+      <article class="service-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl border border-black/5 group flex flex-col justify-between luxury-sheen" data-purpose="service-card">
+        <div class="relative h-64 zoom-img-container">
+          <img
+            alt="Reception Glam Couture in emerald lehenga"
+            class="w-full h-full object-cover"
+            loading="lazy"
+            src="assets/shreya/service-reception-glam.jpg"
+          >
+          <div class="absolute top-4 right-4 bg-onyx/80 backdrop-blur-md px-3 py-1 rounded-full text-[9px] uppercase tracking-widest text-gold-300">
+            Vogue Night &bull; Gala
+          </div>
+        </div>
+        <div class="p-7 space-y-3 flex-1 flex flex-col justify-between">
+          <div>
+            <p class="text-[10px] uppercase tracking-widest text-gold-600 font-semibold">Haute Couture</p>
+            <h3 class="font-serif text-2xl text-onyx font-medium group-hover:text-gold-600 transition-colors">Reception &amp; Night Glam</h3>
+            <p class="text-xs text-neutral-600 leading-relaxed font-light mt-2">
+              High-fashion sculpted cheekbones, sultry smoked lash lines, diamond highlight precision, and flawless flash photography reflection control.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-black/5 flex items-center justify-between text-xs text-neutral-500">
+            <span>Duration: 3 Hours</span>
+            <button type="button" class="trigger-booking-modal text-onyx font-semibold hover:text-gold-600 flex items-center gap-1 group/btn" data-service="Reception &amp; Night Glam">
+              <span>Reserve</span>
+              <span class="text-gold-500 group-hover/btn:translate-x-1 transition-transform">&rarr;</span>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Service 4: Haldi & Mehendi -->
+      <article class="service-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl border border-black/5 group flex flex-col justify-between luxury-sheen" data-purpose="service-card">
+        <div class="relative h-64 zoom-img-container">
+          <img
+            alt="Haldi and Mehendi Joyous Ritual Makeup"
+            class="w-full h-full object-cover"
+            loading="lazy"
+            src="assets/shreya/service-haldi-mehendi.jpg"
+          >
+          <div class="absolute top-4 right-4 bg-onyx/80 backdrop-blur-md px-3 py-1 rounded-full text-[9px] uppercase tracking-widest text-gold-300">
+            Sun-Kissed &bull; Organic
+          </div>
+        </div>
+        <div class="p-7 space-y-3 flex-1 flex flex-col justify-between">
+          <div>
+            <p class="text-[10px] uppercase tracking-widest text-gold-600 font-semibold">Joyous Celebrations</p>
+            <h3 class="font-serif text-2xl text-onyx font-medium group-hover:text-gold-600 transition-colors">Haldi &amp; Mehendi Glow</h3>
+            <p class="text-xs text-neutral-600 leading-relaxed font-light mt-2">
+              Minimal breathable base that withstands daytime sun, turmeric paste, and water splashes while keeping the face naturally radiant.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-black/5 flex items-center justify-between text-xs text-neutral-500">
+            <span>Duration: 2 Hours</span>
+            <button type="button" class="trigger-booking-modal text-onyx font-semibold hover:text-gold-600 flex items-center gap-1 group/btn" data-service="Haldi &amp; Mehendi Glow">
+              <span>Reserve</span>
+              <span class="text-gold-500 group-hover/btn:translate-x-1 transition-transform">&rarr;</span>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Service 5: Architectural Hair Artistry -->
+      <article class="service-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl border border-black/5 group flex flex-col justify-between luxury-sheen" data-purpose="service-card">
+        <div class="relative h-64 zoom-img-container">
+          <img
+            alt="Intricate Indian bridal Mughal braid with fresh jasmine and gold mathapatti"
+            class="w-full h-full object-cover"
+            loading="lazy"
+            src="assets/shreya/service-architectural-hair.jpg"
+          >
+          <div class="absolute top-4 right-4 bg-onyx/80 backdrop-blur-md px-3 py-1 rounded-full text-[9px] uppercase tracking-widest text-gold-300">
+            Bespoke Coiffure
+          </div>
+        </div>
+        <div class="p-7 space-y-3 flex-1 flex flex-col justify-between">
+          <div>
+            <p class="text-[10px] uppercase tracking-widest text-gold-600 font-semibold">Hair Artistry</p>
+            <h3 class="font-serif text-2xl text-onyx font-medium group-hover:text-gold-600 transition-colors">Architectural Hair Artistry</h3>
+            <p class="text-xs text-neutral-600 leading-relaxed font-light mt-2">
+              From intricate Mughal braids laced with fresh jasmine and mogra to sculpted Hollywood waves that hold structure seamlessly.
+            </p>
+            <ul class="text-[11px] text-neutral-500 mt-4 space-y-2">
+              <li class="flex items-center gap-2">&bull; Mathapatti &amp; Sheeshpatti micro-anchoring</li>
+              <li class="flex items-center gap-2">&bull; Real floral web weaving</li>
+              <li class="flex items-center gap-2">&bull; Thermal heat barrier protection</li>
+            </ul>
+          </div>
+          <div class="pt-4 border-t border-black/5 flex items-center justify-between text-xs text-neutral-500">
+            <span>Complementary or Standalone</span>
+            <button type="button" class="trigger-booking-modal text-onyx font-semibold hover:text-gold-600 flex items-center gap-1 group/btn" data-service="Architectural Hair Artistry">
+              <span>Reserve</span>
+              <span class="text-gold-500 group-hover/btn:translate-x-1 transition-transform">&rarr;</span>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Service 6: Royal Draping & Styling -->
+      <article class="service-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl border border-black/5 group flex flex-col justify-between luxury-sheen" data-purpose="service-card">
+        <div class="relative h-64 zoom-img-container">
+          <img
+            alt="Luxury Indian bridal royal draping and textile architecture lehenga"
+            class="w-full h-full object-cover"
+            loading="lazy"
+            src="assets/shreya/service-royal-draping.jpg"
+          >
+          <div class="absolute top-4 right-4 bg-onyx/80 backdrop-blur-md px-3 py-1 rounded-full text-[9px] uppercase tracking-widest text-gold-300">
+            Textile Architecture
+          </div>
+        </div>
+        <div class="p-7 space-y-3 flex-1 flex flex-col justify-between">
+          <div>
+            <p class="text-[10px] uppercase tracking-widest text-gold-600 font-semibold">Royal Draping</p>
+            <h3 class="font-serif text-2xl text-onyx font-medium group-hover:text-gold-600 transition-colors">Royal Draping &amp; Styling</h3>
+            <p class="text-xs text-neutral-600 leading-relaxed font-light mt-2">
+              Weightless weight distribution for heavy hand-embroidered velvet lehengas, multi-dupatta layering, and precision pleat setting that never shifts.
+            </p>
+            <ul class="text-[11px] text-neutral-500 mt-4 space-y-2">
+              <li class="flex items-center gap-2">&bull; Double dupatta royal Sabyasachi trail</li>
+              <li class="flex items-center gap-2">&bull; Kanjeevaram &amp; Banarasi silk pleating</li>
+              <li class="flex items-center gap-2">&bull; Zero pin stress ergonomics</li>
+            </ul>
+          </div>
+          <div class="pt-4 border-t border-black/5 flex items-center justify-between text-xs text-neutral-500">
+            <span>Included in Master Package</span>
+            <button type="button" class="trigger-booking-modal text-onyx font-semibold hover:text-gold-600 flex items-center gap-1 group/btn" data-service="Royal Draping &amp; Styling">
+              <span>Reserve</span>
+              <span class="text-gold-500 group-hover/btn:translate-x-1 transition-transform">&rarr;</span>
+            </button>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     THE EXPERIENCE RITUAL SECTION
+══════════════════════════════════════════════════════════════════════════ -->
+<section class="py-20 lg:py-28 bg-alabaster border-b border-black/5" id="ritual">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12">
+    <!-- Header -->
+    <div class="section-header-reveal text-center max-w-xl mx-auto mb-16 space-y-3">
+      <p class="text-[11px] font-semibold tracking-ultra uppercase text-gold-600">The Shreya Protocol</p>
+      <h2 class="font-serif text-3xl sm:text-5xl text-onyx font-light">The 3-Step Bridal Ritual</h2>
+      <p class="text-xs uppercase tracking-widest text-neutral-500">Seamless peace of mind from first consult to final vidaai</p>
+    </div>
+
+    <!-- 3 Steps -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+
+      <!-- Step 1 -->
+      <div class="ritual-step-card p-8 rounded-2xl bg-linen/50 border editorial-border relative space-y-4 hover:border-gold-400/50 transition-colors duration-300">
+        <span class="font-serif text-5xl font-light text-gold-400 block">01</span>
+        <h3 class="font-serif text-2xl text-onyx font-medium">Bespoke Colorimetry &amp; Trial</h3>
+        <p class="text-xs text-neutral-600 leading-relaxed font-light">
+          We review your ceremony venue lighting, outfit swatch tones, jewelry karats, and perform an in-depth cellular skin analysis 6 to 8 weeks before the wedding.
+        </p>
+        <div class="pt-4 border-t border-black/5 text-[10px] uppercase tracking-widest text-gold-600 font-semibold">
+          Step 01 &bull; Consultation &amp; Moodboard
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="ritual-step-card p-8 rounded-2xl bg-linen/50 border editorial-border relative space-y-4 hover:border-gold-400/50 transition-colors duration-300">
+        <span class="font-serif text-5xl font-light text-gold-400 block">02</span>
+        <h3 class="font-serif text-2xl text-onyx font-medium">Atelier Artistry Execution</h3>
+        <p class="text-xs text-neutral-600 leading-relaxed font-light">
+          On the sacred day, our quiet, unhurried 3-hour session begins with lymphatic cooling, micro-hydration misting, and layer-by-layer micro-buffing with Shreya personally.
+        </p>
+        <div class="pt-4 border-t border-black/5 text-[10px] uppercase tracking-widest text-gold-600 font-semibold">
+          Step 02 &bull; The Sacred Morning
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="ritual-step-card p-8 rounded-2xl bg-linen/50 border editorial-border relative space-y-4 hover:border-gold-400/50 transition-colors duration-300">
+        <span class="font-serif text-5xl font-light text-gold-400 block">03</span>
+        <h3 class="font-serif text-2xl text-onyx font-medium">Phera Concierge &amp; Touchups</h3>
+        <p class="text-xs text-neutral-600 leading-relaxed font-light">
+          A bespoke touch-up kit and dedicated assistant support to ensure your veil is perfectly aligned, lipstick pristine after dinner, and eyes tear-free through the vidaai.
+        </p>
+        <div class="pt-4 border-t border-black/5 text-[10px] uppercase tracking-widest text-gold-600 font-semibold">
+          Step 03 &bull; Unflinching Longevity
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     LOOKBOOK SECTION (Haute Archive - Dark Aesthetic)
+══════════════════════════════════════════════════════════════════════════ -->
+<section class="py-20 lg:py-28 bg-[#161514] text-white" id="lookbook">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12">
+    <!-- Header -->
+    <div class="section-header-reveal flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
+      <div class="space-y-3">
+        <span class="text-[11px] font-semibold tracking-ultra uppercase text-gold-300">Haute Archive</span>
+        <h2 class="font-serif text-3xl sm:text-5xl font-light">Editorial Bridal Lookbook</h2>
+      </div>
+      <p class="text-xs uppercase tracking-widest text-neutral-400 max-w-sm">
+        Real brides, couture transformations, and iconic ceremonial moments captured in ultra-high fidelity.
+      </p>
+    </div>
+
+    <!-- Category Filter Tabs -->
+    <div class="flex flex-wrap items-center gap-2.5 mb-10">
+      <button type="button" class="filter-pill active" data-filter="all">All Looks</button>
+      <button type="button" class="filter-pill" data-filter="heritage">Heritage</button>
+      <button type="button" class="filter-pill" data-filter="reception">Reception</button>
+      <button type="button" class="filter-pill" data-filter="haldi">Haldi &amp; Flora</button>
+    </div>
+
+    <!-- High Fashion Masonry Gallery -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-6 items-stretch">
+
+      <!-- Look 1: Royal Kundan Bride (Heritage) -->
+      <div class="lookbook-item lg:col-span-4 relative rounded-2xl overflow-hidden group shadow-2xl cursor-pointer"
+           data-category="heritage"
+           data-title="The Royal Kundan Bride"
+           data-meta="Palace Courtyard • Rajasthan • Heritage"
+           data-desc="Crimson velvet, antique polki, sculpted eye elevation.">
+        <img
+          alt="Exquisite Indian Royal Bride in Crimson Sabyasachi Lehanga"
+          class="w-full h-full min-h-[460px] object-cover transition-transform duration-700 group-hover:scale-105"
+          loading="lazy"
+          src="assets/shreya/lookbook-royal-kundan.jpg"
+        >
+        <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-black/20 opacity-90 transition-opacity"></div>
+        <div class="absolute bottom-6 left-6 right-6">
+          <span class="text-[9px] uppercase tracking-ultra text-gold-300 font-semibold">Palace Courtyard &bull; Rajasthan</span>
+          <p class="font-serif text-2xl text-white mt-1">The Royal Kundan Bride</p>
+          <p class="text-[11px] text-neutral-300 font-light mt-0.5">Crimson velvet, antique polki, sculpted eye elevation.</p>
+          <span class="inline-block mt-3 text-[10px] uppercase tracking-widest text-gold-400 font-medium group-hover:translate-x-1 transition-transform">View Full Detail &rarr;</span>
+        </div>
+      </div>
+
+      <!-- Look 2: Emerald Reception Couture (Reception) -->
+      <div class="lookbook-item lg:col-span-4 relative rounded-2xl overflow-hidden group shadow-2xl cursor-pointer"
+           data-category="reception"
+           data-title="Emerald Reception Couture"
+           data-meta="Vogue India Aesthetic • Gala Reception"
+           data-desc="Glass-dew finish, diamond polki, slick bridal bun.">
+        <img
+          alt="Vogue India Emerald Green Reception Bride"
+          class="w-full h-full min-h-[460px] object-cover transition-transform duration-700 group-hover:scale-105"
+          loading="lazy"
+          src="assets/shreya/lookbook-emerald-reception.jpg"
+        >
+        <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-black/20 opacity-90 transition-opacity"></div>
+        <div class="absolute bottom-6 left-6 right-6">
+          <span class="text-[9px] uppercase tracking-ultra text-gold-300 font-semibold">Vogue India Aesthetic</span>
+          <p class="font-serif text-2xl text-white mt-1">Emerald Reception Couture</p>
+          <p class="text-[11px] text-neutral-300 font-light mt-0.5">Glass-dew finish, diamond polki, slick bridal bun.</p>
+          <span class="inline-block mt-3 text-[10px] uppercase tracking-widest text-gold-400 font-medium group-hover:translate-x-1 transition-transform">View Full Detail &rarr;</span>
+        </div>
+      </div>
+
+      <!-- Look 3: Pastel Peach Flora (Haldi & Flora) -->
+      <div class="lookbook-item lg:col-span-4 relative rounded-2xl overflow-hidden group shadow-2xl cursor-pointer"
+           data-category="haldi"
+           data-title="Pastel Peach Flora"
+           data-meta="Daylight Pavilion • Pre-Wedding Soirée"
+           data-desc="Sun-drenched dewy cheeks, delicate floral braid.">
+        <img
+          alt="Vogue Weddings Pastel Peach Bridal Look"
+          class="w-full h-full min-h-[460px] object-cover transition-transform duration-700 group-hover:scale-105"
+          loading="lazy"
+          src="assets/shreya/lookbook-pastel-peach.jpg"
+        >
+        <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-black/20 opacity-90 transition-opacity"></div>
+        <div class="absolute bottom-6 left-6 right-6">
+          <span class="text-[9px] uppercase tracking-ultra text-gold-300 font-semibold">Daylight Pavilion</span>
+          <p class="font-serif text-2xl text-white mt-1">Pastel Peach Flora</p>
+          <p class="text-[11px] text-neutral-300 font-light mt-0.5">Sun-drenched dewy cheeks, delicate floral braid.</p>
+          <span class="inline-block mt-3 text-[10px] uppercase tracking-widest text-gold-400 font-medium group-hover:translate-x-1 transition-transform">View Full Detail &rarr;</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     THE MASTER ACADEMY SECTION
+══════════════════════════════════════════════════════════════════════════ -->
+<section class="py-20 lg:py-28 bg-alabaster border-b border-black/5" id="academy">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+
+      <!-- Academy Narrative & Offerings -->
+      <div class="lg:col-span-6 space-y-6">
+        <div class="flex items-center gap-3">
+          <span class="w-8 h-[1px] bg-gold-500"></span>
+          <span class="text-[11px] font-semibold tracking-ultra uppercase text-gold-600">The Master Academy</span>
+        </div>
+
+        <h2 class="font-serif text-3xl sm:text-5xl text-onyx leading-tight font-light">
+          Turn artistry into a <br>
+          <span class="italic text-gold-600 font-normal">signature career</span>
+        </h2>
+
+        <p class="text-sm md:text-base text-neutral-600 leading-relaxed font-light">
+          Shreya Chaudhary's Master Academy is a premier finishing school for serious makeup artists who want to move beyond generic salon work into high-ticket bridal couture and celebrity beauty.
+        </p>
+
+        <!-- Academy Key Features List -->
+        <div class="space-y-4 pt-2">
+          <div class="flex items-start gap-4">
+            <div class="w-8 h-8 rounded-full bg-gold-400/20 text-gold-600 flex items-center justify-center shrink-0 mt-0.5 font-bold text-xs">
+              01
+            </div>
+            <div>
+              <h4 class="font-serif text-lg text-onyx font-medium">Professional Bridal Diploma (30 Days)</h4>
+              <p class="text-xs text-neutral-500 mt-0.5">Comprehensive hands-on training from color theory, airbrush mechanics, skin chemistry, to 6 regional Indian bridal variations.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <div class="w-8 h-8 rounded-full bg-gold-400/20 text-gold-600 flex items-center justify-center shrink-0 mt-0.5 font-bold text-xs">
+              02
+            </div>
+            <div>
+              <h4 class="font-serif text-lg text-onyx font-medium">Live Model Portfolio Masterclass</h4>
+              <p class="text-xs text-neutral-500 mt-0.5">Practice on live human models with high-end designer lehengas and professional cinematic studio lighting for your portfolio.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <div class="w-8 h-8 rounded-full bg-gold-400/20 text-gold-600 flex items-center justify-center shrink-0 mt-0.5 font-bold text-xs">
+              03
+            </div>
+            <div>
+              <h4 class="font-serif text-lg text-onyx font-medium">Business, Pricing &amp; Instagram Mentorship</h4>
+              <p class="text-xs text-neutral-500 mt-0.5">Learn how Shreya scaled to 1,200+ brides, high-ticket pricing strategies, contract negotiation, and viral social content curation.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA Badge & Button -->
+        <div class="pt-6 flex flex-wrap items-center gap-4">
+          <button type="button" class="trigger-booking-modal btn-primary-luxury px-8 py-3.5 bg-onyx text-white text-xs uppercase tracking-widest font-medium rounded-full hover:bg-gold-600 transition-all duration-300 flex items-center gap-3 shadow-md group" data-service="Academy Diploma &amp; Masterclass Prospectus">
+            <span>Explore The Academy</span>
+            <span class="btn-arrow text-gold-300 group-hover:translate-x-1 transition-transform">&rarr;</span>
+          </button>
+          <span class="text-[11px] uppercase tracking-widest text-neutral-500 border border-black/10 px-4 py-3 rounded-full">
+            Next Cohort: May 2025 (8 Seats Only)
+          </span>
+        </div>
+      </div>
+
+      <!-- Academy Atelier Studio Photography -->
+      <div class="lg:col-span-6 editorial-image-reveal">
+        <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-black/10 group luxury-sheen">
+          <img
+            alt="Shreya Makeovers Professional Makeup Academy Atelier Hands-on Masterclass"
+            class="w-full h-[520px] object-cover group-hover:scale-105 transition-transform duration-700"
+            loading="lazy"
+            src="assets/shreya/academy-atelier-studio.jpg"
+          >
+          <div class="absolute inset-0 bg-gradient-to-t from-onyx/85 via-transparent to-transparent"></div>
+          <div class="floating-caption absolute bottom-6 left-6 right-6 text-white">
+            <p class="text-[10px] uppercase tracking-widest text-gold-300 font-semibold">Atelier Masterclass</p>
+            <p class="font-serif text-xl mt-0.5">Live Instruction &amp; Vanity Stations</p>
+            <p class="text-xs text-neutral-300 font-light mt-1">Darbhanga flagship atelier equipped with international vanity stations and global luxury kits.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     WORDS FROM OUR BRIDES (REVIEWS)
+══════════════════════════════════════════════════════════════════════════ -->
+<section class="py-20 lg:py-28 bg-linen/40 border-b border-black/5" id="reviews">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12">
+    <!-- Header -->
+    <div class="section-header-reveal text-center max-w-xl mx-auto mb-16 space-y-3">
+      <div class="inline-flex items-center gap-1.5 text-gold-600">
+        <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+        <span class="text-xs font-semibold tracking-widest text-onyx uppercase">4.98 / 5.0 Rating &bull; 1,200+ Brides</span>
+      </div>
+      <h2 class="font-serif text-3xl sm:text-5xl text-onyx font-light">Words from Our Brides</h2>
+      <p class="text-xs uppercase tracking-widest text-neutral-500">Unfiltered experiences across sacred ceremonies</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+      <!-- Praise 1 -->
+      <blockquote class="review-card p-8 bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-black/5 flex flex-col justify-between space-y-4">
+        <div class="space-y-3">
+          <div class="flex text-gold-500 gap-1 text-xs">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <p class="text-xs sm:text-sm text-neutral-600 leading-relaxed font-light italic">
+            "Shreya was the calm center of my entire wedding day. While chaos surrounded us, her quiet precision made me feel like royalty. My makeup stayed pristine through 4 hours of temple pheras and tears during vidaai."
+          </p>
+        </div>
+        <div class="pt-4 border-t border-black/5">
+          <p class="font-serif text-lg text-onyx font-medium">Anamika Sharma</p>
+          <p class="text-[10px] uppercase tracking-widest text-neutral-500">Patna Royal Wedding &bull; Red Sabyasachi Bride</p>
+        </div>
+      </blockquote>
+
+      <!-- Praise 2 -->
+      <blockquote class="review-card p-8 bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-black/5 flex flex-col justify-between space-y-4">
+        <div class="space-y-3">
+          <div class="flex text-gold-500 gap-1 text-xs">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <p class="text-xs sm:text-sm text-neutral-600 leading-relaxed font-light italic">
+            "As a doctor, I rarely wear heavy makeup and was terrified of looking cakey. Shreya understood my skin texture instantly. My base was completely weightless, like a glowing veil, and our photos look straight out of Vogue."
+          </p>
+        </div>
+        <div class="pt-4 border-t border-black/5">
+          <p class="font-serif text-lg text-onyx font-medium">Dr. Radhika Singhania</p>
+          <p class="text-[10px] uppercase tracking-widest text-neutral-500">Darbhanga Destination Bride &bull; Pastel Theme</p>
+        </div>
+      </blockquote>
+
+      <!-- Praise 3 -->
+      <blockquote class="review-card p-8 bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-black/5 flex flex-col justify-between space-y-4">
+        <div class="space-y-3">
+          <div class="flex text-gold-500 gap-1 text-xs">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <p class="text-xs sm:text-sm text-neutral-600 leading-relaxed font-light italic">
+            "I also took Shreya's 1-month professional academy course before opening my studio. Her patience, technique breakdown, and business advice gave me the courage to launch my brand. She is a true master."
+          </p>
+        </div>
+        <div class="pt-4 border-t border-black/5">
+          <p class="font-serif text-lg text-onyx font-medium">Priya K. Verma</p>
+          <p class="text-[10px] uppercase tracking-widest text-neutral-500">Academy Graduate 2024 &bull; Independent Artist</p>
+        </div>
+      </blockquote>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     BRIDAL JOURNAL SECTION
+══════════════════════════════════════════════════════════════════════════ -->
+<section class="py-20 lg:py-28 bg-alabaster border-b border-black/5" id="journal">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12">
+    <!-- Header -->
+    <div class="section-header-reveal flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+      <div class="space-y-3">
+        <span class="text-[11px] font-semibold tracking-ultra uppercase text-gold-600">The Atelier Notebook</span>
+        <h2 class="font-serif text-3xl sm:text-5xl text-onyx font-light">Bridal Journal &amp; Insights</h2>
+      </div>
+      <p class="text-xs uppercase tracking-widest text-neutral-500 max-w-sm">
+        Curated essays on skin preparation, jewelry tone harmonization, and ceremony longevity.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+      <!-- Journal 1 -->
+      <article class="journal-card group cursor-pointer" data-purpose="journal-card">
+        <div class="relative h-60 rounded-2xl overflow-hidden bg-linen mb-5 zoom-img-container">
+          <img
+            alt="Skin prep bridal journal"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            loading="lazy"
+            src="assets/shreya/journal-48h-skin-prep.jpg"
+          >
+          <span class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-[9px] uppercase tracking-widest text-onyx font-semibold">
+            Skincare Rituals
+          </span>
+        </div>
+        <p class="text-[10px] uppercase tracking-widest text-neutral-400">June 18, 2025 &bull; 4 Min Read</p>
+        <h3 class="font-serif text-xl text-onyx font-medium mt-1 group-hover:text-gold-600 transition-colors">
+          Why we prep bridal skin 48 hours before the sacred muhurat
+        </h3>
+        <p class="text-xs text-neutral-600 font-light mt-2 line-clamp-2">
+          Discover how micro-lymphatic drainage and humectant infusion prevent flash glare and texture cake-up.
+        </p>
+      </article>
+
+      <!-- Journal 2 -->
+      <article class="journal-card group cursor-pointer" data-purpose="journal-card">
+        <div class="relative h-60 rounded-2xl overflow-hidden bg-linen mb-5 zoom-img-container">
+          <img
+            alt="Jewelry undertone matching guide"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            loading="lazy"
+            src="assets/shreya/journal-polki-colorimetry.jpg"
+          >
+          <span class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-[9px] uppercase tracking-widest text-onyx font-semibold">
+            Colorimetry
+          </span>
+        </div>
+        <p class="text-[10px] uppercase tracking-widest text-neutral-400">May 29, 2025 &bull; 6 Min Read</p>
+        <h3 class="font-serif text-xl text-onyx font-medium mt-1 group-hover:text-gold-600 transition-colors">
+          Harmonizing Polki and antique gold undertones with your foundation
+        </h3>
+        <p class="text-xs text-neutral-600 font-light mt-2 line-clamp-2">
+          The optical science behind yellow gold versus silver diamond reflections under 4K lenses.
+        </p>
+      </article>
+
+      <!-- Journal 3 -->
+      <article class="journal-card group cursor-pointer" data-purpose="journal-card">
+        <div class="relative h-60 rounded-2xl overflow-hidden bg-linen mb-5 zoom-img-container">
+          <img
+            alt="Academy masterclass certification"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            loading="lazy"
+            src="assets/shreya/journal-30day-certification.jpg"
+          >
+          <span class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-[9px] uppercase tracking-widest text-onyx font-semibold">
+            Education
+          </span>
+        </div>
+        <p class="text-[10px] uppercase tracking-widest text-neutral-400">April 14, 2025 &bull; 5 Min Read</p>
+        <h3 class="font-serif text-xl text-onyx font-medium mt-1 group-hover:text-gold-600 transition-colors">
+          Inside our 30-Day bridal artist certification at Darbhanga Atelier
+        </h3>
+        <p class="text-xs text-neutral-600 font-light mt-2 line-clamp-2">
+          A documentary look into real hands-on vanity sessions, client psychology, and portfolio curation.
+        </p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     FINAL HAUTE CTA (Deep Atmospheric Luxury)
+══════════════════════════════════════════════════════════════════════════ -->
+<section class="py-24 lg:py-32 bg-[#0D0D0C] text-white relative overflow-hidden" id="contact">
+  <!-- Ambient Golden Glow -->
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gold-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+  <div class="section-header-reveal max-w-5xl mx-auto px-6 lg:px-12 text-center relative z-10 space-y-8">
+    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-gold-400/30 bg-white/5 text-[10px] uppercase tracking-ultra text-gold-300">
+      <span>Private Atelier Booking &bull; 2025–2026 Calendar</span>
+    </div>
+
+    <h2 class="font-serif text-4xl sm:text-6xl lg:text-7xl font-light tracking-tight leading-[1.08] max-w-3xl mx-auto text-stone-100">
+      Your once-in-a-lifetime deserves an <br>
+      <span class="italic text-gold-300 font-normal">unforgettable signature</span>
+    </h2>
+
+    <p class="text-xs sm:text-sm text-neutral-400 font-light max-w-xl mx-auto leading-relaxed">
+      Due to Shreya’s single-artist policy, we accept a strictly limited number of bridal reservations per calendar month. Destination dates outside Bihar are booked 6 to 12 months in advance.
+    </p>
+
+    <!-- Direct Actions -->
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-5 pt-4">
+      <button type="button" class="trigger-booking-modal w-full sm:w-auto px-9 py-4 bg-gold-500 hover:bg-gold-400 text-onyx font-semibold text-xs uppercase tracking-widest rounded-full transition-all shadow-xl hover:scale-105 flex items-center justify-center gap-3 group" data-service="Private Atelier Reservation">
+        <span>Book Your Consultation</span>
+        <span class="btn-arrow group-hover:translate-x-1 transition-transform">&rarr;</span>
+      </button>
+
+      <a class="w-full sm:w-auto px-8 py-4 border border-white/20 hover:border-gold-300 text-stone-200 text-xs uppercase tracking-widest rounded-full transition-all hover:text-white" href="tel:+919876543210">
+        Call Atelier Desk
+      </a>
+    </div>
+
+    <!-- Quick Atelier Info Strip -->
+    <div class="pt-16 border-t border-white/10 grid grid-cols-1 sm:grid-cols-3 gap-6 text-xs text-neutral-400">
+      <div>
+        <p class="uppercase tracking-widest text-gold-300 text-[10px] font-medium">Flagship Atelier</p>
+        <p class="text-neutral-300 mt-1">Central Roadway, Darbhanga, Bihar, India</p>
+      </div>
+      <div>
+        <p class="uppercase tracking-widest text-gold-300 text-[10px] font-medium">Global Inquiries</p>
+        <p class="text-neutral-300 mt-1">concierge@shreyamakeovers.com</p>
+      </div>
+      <div>
+        <p class="uppercase tracking-widest text-gold-300 text-[10px] font-medium">Studio Hours</p>
+        <p class="text-neutral-300 mt-1">Tuesday – Sunday &bull; By Prior Appointment</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════════════════════════════════════ -->
+<footer class="bg-[#080808] text-white border-t border-white/10 py-16">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-12 pb-12 border-b border-white/10">
+
+      <!-- Brand Identity -->
+      <div class="md:col-span-5 space-y-4">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-full border border-gold-400/50 flex items-center justify-center">
+            <span class="font-serif text-sm font-semibold tracking-wider text-gold-300">SM</span>
+          </div>
+          <div>
+            <span class="font-serif text-lg tracking-[0.2em] font-bold block text-white">SHREYA</span>
+            <span class="text-[8px] tracking-ultra text-gold-400 uppercase block">MAKEOVERS ATELIER</span>
+          </div>
+        </div>
+        <p class="text-xs text-neutral-400 leading-relaxed font-light max-w-sm">
+          Haute bridal artistry, celebrity transformation, and professional makeup education led by master artist Shreya Chaudhary. Darbhanga &bull; Destination Worldwide.
+        </p>
+        <p class="font-script text-3xl text-gold-400 pt-2">Shreya Chaudhary</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="md:col-span-3 space-y-3">
+        <p class="text-[10px] uppercase tracking-widest text-gold-300 font-semibold">Atelier Navigation</p>
+        <ul class="text-xs text-neutral-400 space-y-2 font-light">
+          <li><a class="hover:text-gold-300 transition-colors" href="#hero">Home &amp; Hero</a></li>
+          <li><a class="hover:text-gold-300 transition-colors" href="#story">Brand Philosophy</a></li>
+          <li><a class="hover:text-gold-300 transition-colors" href="#services">Signature Bridal Services</a></li>
+          <li><a class="hover:text-gold-300 transition-colors" href="#ritual">The 3-Step Protocol</a></li>
+          <li><a class="hover:text-gold-300 transition-colors" href="#lookbook">Editorial Lookbook</a></li>
+          <li><a class="hover:text-gold-300 transition-colors" href="#academy">Master Academy Syllabus</a></li>
+        </ul>
+      </div>
+
+      <!-- Destinations & Academy -->
+      <div class="md:col-span-4 space-y-3">
+        <p class="text-[10px] uppercase tracking-widest text-gold-300 font-semibold">Destination Bookings</p>
+        <p class="text-xs text-neutral-400 leading-relaxed font-light">
+          Available for destination weddings across Udaipur, Jaipur, Goa, Patna, Delhi NCR, and international venues with our mobile beauty squad.
+        </p>
+        <div class="pt-3">
+          <span class="text-[10px] uppercase tracking-widest text-neutral-400 block mb-2">Connect Social</span>
+          <div class="flex items-center gap-4 text-xs text-gold-400">
+            <a class="hover:underline" href="https://instagram.com" target="_blank" rel="noopener">Instagram (@shreyamakeovers)</a>
+            <span>&bull;</span>
+            <a class="hover:underline" href="https://wa.me/919876543210" target="_blank" rel="noopener">WhatsApp VIP Desk</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Legal Bottom -->
+    <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] text-neutral-500 font-light gap-4">
+      <p>&copy; 2025–2026 Shreya Makeovers. All Rights Reserved. Crafted for Haute Bridal Artistry.</p>
+      <div class="flex items-center space-x-6">
+        <a class="hover:text-neutral-400 transition-colors" href="#">Privacy Policy</a>
+        <a class="hover:text-neutral-400 transition-colors" href="#">Terms of Service</a>
+        <a class="hover:text-neutral-400 transition-colors" href="#">Booking Guidelines</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     MOBILE STICKY ACTION BAR
+══════════════════════════════════════════════════════════════════════════ -->
+<div id="mobile-sticky-bar" class="mobile-sticky-bar lg:hidden" aria-label="Quick action bar">
+  <div class="flex items-center gap-2.5">
+    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0"></span>
+    <div>
+      <span class="block text-[10px] tracking-widest uppercase text-gold-300 font-semibold">Shreya Makeovers</span>
+      <span class="block text-[9px] text-neutral-400">2025/26 Muhurat Open</span>
+    </div>
+  </div>
+  <button type="button" class="trigger-booking-modal px-4 py-2 bg-gold-500 text-onyx font-semibold text-[10px] uppercase tracking-widest rounded-full" data-service="Mobile Quick Reservation">
+    Book Now &rarr;
+  </button>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     INTERACTIVE CONSULTATION BOOKING MODAL
+══════════════════════════════════════════════════════════════════════════ -->
+<div id="booking-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal-box p-6 sm:p-8 relative">
+    <!-- Close Button -->
+    <button id="close-booking-modal" class="absolute top-4 right-4 p-2 text-neutral-400 hover:text-onyx transition-colors" aria-label="Close dialog">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg>
+    </button>
+
+    <!-- Header -->
+    <div class="mb-6 pb-4 border-b border-black/5">
+      <div class="flex items-center gap-2 mb-1.5">
+        <span class="w-4 h-[1px] bg-gold-500"></span>
+        <span class="text-[10px] uppercase tracking-widest text-gold-600 font-semibold">Private Atelier Desk</span>
+      </div>
+      <h3 id="modal-title" class="font-serif text-2xl sm:text-3xl text-onyx font-medium">Reserve Your Bridal Consultation</h3>
+      <p class="text-xs text-neutral-500 mt-1">Single-artist policy: dates confirmed on priority basis. Direct connection to Shreya's studio desk.</p>
+    </div>
+
+    <!-- Booking Form -->
+    <form id="atelier-booking-form" class="space-y-4">
+      <div>
+        <label class="field-label" for="modal-service-select">Curated Service / Masterclass</label>
+        <select id="modal-service-select" class="field-input">
+          <option value="Sacred Bridal Artistry">Sacred Bridal Artistry (Pheras / Saptapadi)</option>
+          <option value="Engagement &amp; Soft Glam">Engagement &amp; Soft Glam (Ring Ceremony / Sangeet)</option>
+          <option value="Reception &amp; Night Glam">Reception &amp; Night Glam (Vogue Evening)</option>
+          <option value="Haldi &amp; Mehendi Glow">Haldi &amp; Mehendi Glow (Sun-Kissed / Organic)</option>
+          <option value="Architectural Hair Artistry">Architectural Hair Artistry (Mughal Braid / Waves)</option>
+          <option value="Royal Draping &amp; Styling">Royal Draping &amp; Styling (Double Dupatta)</option>
+          <option value="Academy Diploma (30 Days)">Academy: Professional Bridal Diploma (30 Days)</option>
+          <option value="Academy Portfolio Masterclass">Academy: Live Model Portfolio Masterclass</option>
+          <option value="Haute Bridal Consultation">General Bespoke Bridal Consultation</option>
+        </select>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div>
+          <label class="field-label" for="book-date">Ceremony / Event Date</label>
+          <input id="book-date" type="date" class="field-input" required>
+        </div>
+        <div>
+          <label class="field-label" for="book-location">Venue / Destination City</label>
+          <input id="book-location" type="text" placeholder="e.g. Darbhanga / Patna / Udaipur" class="field-input" required>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div>
+          <label class="field-label" for="book-name">Your Full Name</label>
+          <input id="book-name" type="text" placeholder="e.g. Shalini Roy" class="field-input" required>
+        </div>
+        <div>
+          <label class="field-label" for="book-phone">WhatsApp Number</label>
+          <input id="book-phone" type="tel" placeholder="+91 98765 43210" class="field-input" required>
+        </div>
+      </div>
+
+      <div>
+        <label class="field-label" for="book-notes">Outfit Palette &amp; Vision Notes</label>
+        <textarea id="book-notes" rows="2" placeholder="Tell us about your lehenga shade, jewelry style, or ceremony timing..." class="field-input resize-y"></textarea>
+      </div>
+
+      <button type="submit" class="w-full py-3.5 bg-onyx hover:bg-gold-600 text-white font-semibold text-xs uppercase tracking-widest rounded-xl transition-all shadow-md flex items-center justify-center gap-2 group">
+        <span>Connect With Studio Desk on WhatsApp</span>
+        <span class="text-gold-300 group-hover:translate-x-1 transition-transform">&rarr;</span>
+      </button>
+
+      <p class="text-center text-[11px] text-neutral-400">
+        Direct VIP reservation desk. Your information is strictly confidential.
+      </p>
+    </form>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     INTERACTIVE LOOKBOOK LIGHTBOX MODAL
+══════════════════════════════════════════════════════════════════════ -->
+<div id="lightbox-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Lookbook detail view">
+  <div class="lightbox-content max-w-4xl w-full p-4 sm:p-6 relative text-white">
+    <!-- Close Button -->
+    <button id="close-lightbox" class="absolute top-4 right-4 z-20 p-2 bg-black/60 hover:bg-black/90 rounded-full text-white/80 hover:text-white transition-colors" aria-label="Close preview">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg>
+    </button>
+
+    <div class="flex flex-col md:flex-row gap-6 items-center">
+      <!-- High-Res Image View -->
+      <div class="w-full md:w-3/5 h-[360px] sm:h-[460px] rounded-xl overflow-hidden bg-neutral-900">
+        <img id="lightbox-img" src="" alt="Lookbook Preview" class="w-full h-full object-cover">
+      </div>
+
+      <!-- Detail Panel -->
+      <div class="w-full md:w-2/5 space-y-4">
+        <div>
+          <span id="lightbox-category" class="text-[10px] uppercase tracking-widest text-gold-400 font-semibold block">Haute Archive</span>
+          <h3 id="lightbox-title" class="font-serif text-2xl sm:text-3xl text-white font-medium mt-1"></h3>
+          <p id="lightbox-desc" class="text-xs text-neutral-300 font-light mt-2 leading-relaxed"></p>
+        </div>
+
+        <div class="pt-4 border-t border-white/10 space-y-3">
+          <p class="text-[11px] text-neutral-400">
+            Loved this aesthetic? Shreya customizes this bridal formulation to your natural skin undertones and wedding lighting.
+          </p>
+          <button id="lightbox-inquire-btn" type="button" class="w-full py-3 bg-gold-500 hover:bg-gold-400 text-onyx font-semibold text-xs uppercase tracking-widest rounded-full transition-all">
+            Inquire About This Look &rarr;
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Motion Controller -->
+<script src="app.js"></script>
+
+</body>
+</html>
